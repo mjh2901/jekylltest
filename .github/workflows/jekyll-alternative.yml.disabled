@@ -1,0 +1,27 @@
+# Alternative Jekyll workflow using the official Jekyll GitHub Action
+# This file is disabled (note the .disabled extension)
+# To use this instead of the current workflow:
+# 1. Rename this file to remove .disabled
+# 2. Rename jekyll.yml to jekyll.yml.disabled
+
+name: Build and Deploy Jekyll Site (Alternative)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/deploy-pages@v4
+        if: github.ref == 'refs/heads/main'
