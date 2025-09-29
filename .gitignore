@@ -8,3 +8,6 @@ vendor/bundle/
 
 # Do NOT ignore Gemfile.lock — keep the lockfile under source control
 # Gemfile.lock
+
+# Ignore editor settings
+.vscode/
