@@ -2,12 +2,19 @@
 
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2"
+# Use the github-pages gem so GitHub Pages' build environment can
+# satisfy and lock the versions it supports. Do not also pin
+# `jekyll` directly when using this gem — that causes conflicts.
+gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.16"
-  gem "jekyll-paginate", "~> 1.1"
-  gem "jekyll-redirect-from", "~> 0.16"
-  gem "jekyll-sitemap", "~> 1.4"
+  # You can keep these plugin declarations here. Note: GitHub Pages
+  # only supports a specific set of plugins. If you rely on a plugin
+  # not supported by Pages, consider building with GitHub Actions
+  # instead of the Pages native build.
+  gem "jekyll-feed"
+  gem "jekyll-paginate"
+  gem "jekyll-redirect-from"
+  gem "jekyll-sitemap"
   gem "jekyll-shell-theme"
 end
