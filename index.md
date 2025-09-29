@@ -1,8 +1,4 @@
 ---
-layout: default
-title: Home
+title: Blog
+layout: blog
 ---
-
-# jekylltest
-
-Jekyll test — a minimal starter site.
