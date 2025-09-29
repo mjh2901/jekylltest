@@ -5,4 +5,4 @@ url: ""
 markdown: kramdown
 remote_theme: "tareqdandachi/jekyll-shell-theme"
 plugins:
-	- jekyll-remote-theme
+  - jekyll-remote-theme
