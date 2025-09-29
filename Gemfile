@@ -16,5 +16,5 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-redirect-from"
   gem "jekyll-sitemap"
-  gem "jekyll-shell-theme"
+  # removed jekyll-shell-theme because it is not supported by GitHub Pages' github-pages gem
 end
